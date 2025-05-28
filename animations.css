@@ -1,0 +1,175 @@
+h1 {
+  text-align: center;
+  font-size: 35px;
+  margin: 50px 0px;
+}
+
+.task-1__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.rotate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(188, 132, 241);
+  width: 150px;
+  height: 150px;
+  border-radius: 40%;
+  font-size: 25px;
+  color: azure;
+  letter-spacing: 2px;
+  animation: rotate 5s 0s infinite;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+.scale {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(124, 52, 233);
+  width: 150px;
+  height: 150px;
+  border-radius: 40%;
+  font-size: 25px;
+  color: azure;
+  letter-spacing: 2px;
+  animation: scale 1s ease-in infinite alternate;
+}
+
+@keyframes scale {
+  from {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+
+  to {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+
+.translate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40%;
+  background-color: rgb(216, 190, 255);
+  font-size: 25px;
+  color: azure;
+  letter-spacing: 2px;
+  width: 150px;
+  height: 150px;
+  position: relative;
+  animation: translate 3s infinite alternate;
+}
+
+@keyframes translate {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(150px);
+  }
+}
+
+.skew {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40%;
+  background-color: rgb(216, 190, 255);
+  font-size: 25px;
+  color: azure;
+  letter-spacing: 2px;
+  width: 150px;
+  height: 150px;
+  animation: skew 0.5s ease-in infinite alternate;
+}
+
+@keyframes skew {
+  from {
+    transform: skew(0, 0);
+  }
+
+  to {
+    transform: skew(10deg, 10deg);
+    background-color: rgb(170, 116, 250);
+  }
+}
+
+.transition {
+  width: 150px;
+  height: 150px;
+  background-color: rgb(124, 52, 233);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40%;
+  font-size: 25px;
+  color: azure;
+  letter-spacing: 2px;
+}
+
+.transition:hover {
+  transition: 5s;
+  cursor: pointer;
+  background-color: rgb(170, 116, 250);
+  animation: transition 2s ease-in infinite alternate;
+}
+
+@keyframes transition {
+  from {
+    transform: matrix(1, 0, 0, 1, 0, 0);
+  }
+
+  to {
+    transform: matrix(1, 5, 5, 1, 10, 10);
+  }
+}
+
+.keyframes {
+  width: 150px;
+  height: 150px;
+  background-color: rgb(124, 52, 233);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40%;
+  font-size: 25px;
+  color: azure;
+  letter-spacing: 2px;
+  animation: keyframes 2s ease-in infinite alternate;
+  position: relative;
+}
+
+@keyframes keyframes {
+  0% {
+    transform: translateX(0) scale(1);
+    background-color: rgb(110, 160, 252);
+  }
+
+  30% {
+    transform: translateX(100px) scale(1.2);
+    background-color: rgb(140, 151, 245);
+  }
+
+  60% {
+    transform: translateX(250px) scale(0.8);
+    background-color: rgb(21, 14, 243);
+  }
+
+  100% {
+    transform: translateX(500px) scale(1);
+    background-color: rgb(118, 108, 233);
+  }
+}
