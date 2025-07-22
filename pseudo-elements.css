@@ -1,5 +1,6 @@
 body {
   font-family: "Libertinus Mono", monospace;
+  background-color: #d5d4f71c;
 }
 
 h2 {
@@ -7,17 +8,8 @@ h2 {
 }
 
 .paragraph-1::before {
-  content: "🤖 Псевдоэлемент ::before добавляет emoji-значок перед текстом";
+  content: "🤖";
   display: block;
-  color: #726cd1;
-  font-size: 20px;
-}
-
-.paragraph-2::before {
-  content: "🧠  Псевдоэлемент ::before добавляет emoji-значок перед текстом";
-  color: #726cd1;
-  display: block;
-  font-size: 20px;
 }
 
 p {
@@ -25,18 +17,9 @@ p {
   line-height: 150%;
 }
 
-.paragraph-3::after {
-  content: "⚙️ Псевдоэлемент ::after добавляет emoji-значок после текста";
+.paragraph-2::after {
+  content: "⚙️";
   display: block;
-  color: #726cd1;
-  font-size: 20px;
-}
-
-.paragraph-4::after {
-  content: "🌐 Псевдоэлемент ::after добавляет emoji-значок после текста";
-  display: block;
-  color: #726cd1;
-  font-size: 20px;
 }
 
 section {
@@ -45,62 +28,36 @@ section {
   padding: 30px;
   margin: 50px auto;
   max-width: 1000px;
-  border-radius: 12px;
+  border-radius: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  font-family: sans-serif;
-}
-
-section::before,
-section::after {
-  content: "";
-  position: absolute;
-  height: 4px;
-  width: 100%;
-  left: 0;
-  background: linear-gradient(to right, #b6eefd, #004fb0);
 }
 
 section::before {
-  top: -10px;
+  content: "";
+  position: absolute;
+  height: 10px;
+  width: 100%;
+  left: 0;
+  background: linear-gradient(to right, #b7b6fd, #567498);
+  top: -20px;
 }
 
 section::after {
-  bottom: -10px;
-}
-
-section h2 {
-  position: relative;
-  font-size: 1.5em;
-  margin-bottom: 20px;
-  padding-bottom: 10px;
-}
-
-section h2::after {
   content: "";
   position: absolute;
-  bottom: 0;
+  height: 10px;
+  width: 100%;
   left: 0;
-  height: 3px;
-  width: 60px;
-  background-color: #004fb0;
-  border-radius: 2px;
+  background: linear-gradient(to left, #b7b6fd, #567498);
+  bottom: -20px;
 }
 
-.paragraph-6::before {
+.paragraph-4::before {
   content: "⏳";
-  margin-right: 8px;
-  color: #0072ff;
+  margin-right: 5px;
 }
 
-.paragraph-5::before {
+.paragraph-3::before {
   content: "💡";
-  margin-right: 8px;
-  color: #0072ff;
-}
-
-.paragraph-5,
-.paragraph-6 {
-  line-height: 1.6;
-  margin-bottom: 15px;
-  position: relative;
+  margin-right: 5px;
 }
